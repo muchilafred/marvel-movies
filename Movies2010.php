@@ -13,7 +13,7 @@
         <h2>List of Marvel Movies made after year 20101</h2>
         <?
         include 'dbConnect.php';
-        $sql_query = "SELECT marvelMovieID,yearReleased,title,productionStudio,notes,CHAR_LENGTH (notes) as llen FROM marvelmovies where yearReleased > 2010 ";
+        $sql_query = "SELECT marvelMovieID,yearReleased,title,productionStudio,notes,CHAR_LENGTH (notes) as llen FROM marvelmovies where yearReleased > 2010; ";
         $result = $link->query($sql_query);
         while($row = $result->fetch_array()){
             // print out fields from row of data
